@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-    --bg:          #1a1a0e;
-    --surface:     #0f0f08;
-    --shell:       #c8b89a;
-    --shell-dark:  #9e8a6e;
-    --chrome-bg:   #c8b89a;
-    --chrome-text: #1a1a0e;
-    --text:        #39ff14;
-    --text-muted:  #1f8c0a;
-    --accent:      #d4a853;
+    --bg:          #000000;
+    --surface:     #0a0a0a;
+    --chrome-bg:   #0a0a0a;
+    --chrome-text: #00ff41;
+    --text:        #00ff41;
+    --text-muted:  #008f2f;
+    --accent:      #00aaff;
     --btn-red:     #ff3366;
-    --btn-cyan:    #00cfff;
+    --btn-cyan:    #00aaff;
     --btn-yellow:  #ffe600;
-    --link:        #39ff14;
-    --link-hover:  #00cfff;
-    --border:      #2a3a1a;
-    --scanline:    rgba(0, 0, 0, 0.08);
+    --link:        #00ff41;
+    --link-hover:  #00aaff;
+    --border:      #003300;
+    --scanline:    rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -26,12 +24,12 @@ body {
     cursor: crosshair;
 }
 
-/* Header — hardware shell / bezel */
+/* Header */
 header {
     background-color: var(--chrome-bg);
     color: var(--chrome-text);
     padding: 30px;
-    border-bottom: 3px solid var(--shell-dark);
+    border-bottom: 1px solid var(--border);
 }
 
 header a {
@@ -42,7 +40,7 @@ header a {
 
 header a:hover {
     text-decoration: underline;
-    color: var(--btn-red);
+    color: var(--link-hover);
 }
 
 .header-content {
@@ -75,7 +73,7 @@ main {
     flex: 1;
     background-color: var(--bg);
     color: var(--text);
-    text-shadow: 0 0 8px #39ff14;
+    text-shadow: 0 0 8px #00ff41;
     /* Scanline effect */
     background-image: repeating-linear-gradient(
         to bottom,
@@ -122,11 +120,11 @@ main {
     flex-shrink: 0;
 }
 
-/* Footer — hardware shell / bezel */
+/* Footer */
 footer {
     background-color: var(--chrome-bg);
     color: var(--chrome-text);
-    border-top: 3px solid var(--shell-dark);
+    border-top: 1px solid var(--border);
 }
 
 .footer-content {

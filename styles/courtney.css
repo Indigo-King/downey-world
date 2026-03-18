@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root {
-    --bg:          #0d0010;
-    --surface:     #1a0020;
-    --chrome-bg:   #1a0028;
-    --chrome-text: #ff00aa;
-    --text:        #ffe6ff;
-    --text-muted:  #cc99cc;
-    --accent:      #ff00aa;
-    --accent-2:    #cc00ff;
-    --accent-3:    #ff66cc;
-    --link:        #ff66cc;
-    --link-hover:  #ff00aa;
-    --border:      #660066;
-    --grad-start:  #1a0028;
-    --grad-end:    #0d0010;
+    --bg:          #000d0f;
+    --surface:     #001a1f;
+    --chrome-bg:   #001520;
+    --chrome-text: #00e5cc;
+    --text:        #e0fffa;
+    --text-muted:  #7abfb8;
+    --accent:      #00e5cc;
+    --accent-2:    #9b00ff;
+    --accent-3:    #00b8a0;
+    --link:        #00ccb8;
+    --link-hover:  #00e5cc;
+    --border:      #005566;
+    --grad-start:  #001528;
+    --grad-end:    #000d0f;
     --sparkle:     #ffffff;
 }
 
@@ -30,7 +30,7 @@ header {
     color: var(--chrome-text);
     padding: 30px;
     border-bottom: 2px solid var(--accent);
-    box-shadow: 0 0 20px #ff00aa44;
+    box-shadow: 0 0 20px #00e5cc44;
 }
 
 header a {
@@ -106,7 +106,7 @@ main {
     background-color: var(--surface);
     border: 1px solid var(--accent);
     padding: 20px;
-    box-shadow: 0 0 10px #ff00aa55;
+    box-shadow: 0 0 10px #00e5cc55;
 }
 
 .side-by-side img {

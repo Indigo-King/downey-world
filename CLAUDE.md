@@ -78,7 +78,7 @@ These personalities directly inform the section aesthetics. Do not sanitize them
 - `styles/recipes.css` — old cookbook/parchment aesthetic (done)
 - `styles/john.css` — terminal/wizard-king aesthetic (done)
 - `styles/courtney.css` — Myspace era aesthetic (done)
-- `style.css` — **legacy file, fully superseded, no longer referenced** (safe to delete)
+- ~~`style.css`~~ — deleted, fully superseded
 - `pages/recipes/recipe-page.html` — recipe hub
 - `pages/recipes/brntbrcl.html` — Burnt Broccoli
 - `pages/recipes/msssspprst.html` — Mississippi Roast
@@ -203,58 +203,57 @@ Each stylesheet defines the same class names (`.header-content`, `.main-content`
 
 ### `john.css`
 
-**Aesthetic:** Terminal CLI meets retro hardware shell. Matrix-style phosphor green on deep warm black, housed inside a manila/beige hardware shell with vibrant accent buttons. Think a CRT monitor on a wooden workbench. Wizard-king energy throughout.
+**Aesthetic:** Pure terminal CLI. Black screen, bright phosphor green text, blue accents. Full commitment to the CLI environment — no hardware shell framing, the whole page is the terminal. Wizard-king energy throughout.
 
 | Role | Token | Hex |
 |---|---|---|
-| Page background (terminal) | `--bg` | `#1a1a0e` |
-| Surface / panel bg | `--surface` | `#0f0f08` |
-| Hardware shell | `--shell` | `#c8b89a` |
-| Hardware shell dark | `--shell-dark` | `#9e8a6e` |
-| Header / footer bg | `--chrome-bg` | `#c8b89a` |
-| Header / footer text | `--chrome-text` | `#1a1a0e` |
-| Primary text (phosphor) | `--text` | `#39ff14` |
-| Dimmed phosphor text | `--text-muted` | `#1f8c0a` |
-| Amber accent | `--accent` | `#d4a853` |
+| Page background | `--bg` | `#000000` |
+| Surface / panel bg | `--surface` | `#0a0a0a` |
+| Header / footer bg | `--chrome-bg` | `#0a0a0a` |
+| Header / footer text | `--chrome-text` | `#00ff41` |
+| Primary text (phosphor) | `--text` | `#00ff41` |
+| Dimmed text | `--text-muted` | `#008f2f` |
+| Blue accent | `--accent` | `#00aaff` |
 | Vibrant button red | `--btn-red` | `#ff3366` |
-| Vibrant button cyan | `--btn-cyan` | `#00cfff` |
+| Vibrant button cyan | `--btn-cyan` | `#00aaff` |
 | Vibrant button yellow | `--btn-yellow` | `#ffe600` |
-| Link | `--link` | `#39ff14` |
-| Link hover | `--link-hover` | `#00cfff` |
-| Border / divider | `--border` | `#2a3a1a` |
-| Scanline overlay | `--scanline` | `rgba(0,0,0,0.08)` |
+| Link | `--link` | `#00ff41` |
+| Link hover | `--link-hover` | `#00aaff` |
+| Border / divider | `--border` | `#003300` |
+| Scanline overlay | `--scanline` | `rgba(0,0,0,0.15)` |
 
 **Fonts:** JetBrains Mono (Google Fonts). Courier New fallback. Everything monospace — full commitment to the terminal aesthetic.
 
 **Notes:**
-- Header and footer use `--shell` (hardware bezel color), not terminal black — they frame the terminal like a physical monitor
+- Header and footer are part of the terminal — same black background, green text. No bezel/shell concept on this page.
 - Apply a subtle CSS scanline effect to main content via repeating linear gradient with `--scanline`
-- Vibrant buttons used sparingly for CTAs — they pop against the dark background like actual hardware buttons
-- Text-shadow on primary text: `0 0 8px #39ff14` for soft phosphor glow
+- Text-shadow on primary text: `0 0 8px #00ff41` for soft phosphor glow
+- Headings use `--accent` (blue) with matching glow: `0 0 8px #00aaff`
 - `cursor: crosshair` is implemented on `body`
+- A hardware shell aesthetic may be explored on a separate page in the future — do not reintroduce it here
 
 ---
 
 ### `courtney.css`
 
-**Aesthetic:** Myspace era (~2004–2007). Deep purple-black background, hot pink and purple accents, early 2000s gradient energy. Personal and nostalgic — built for Courtney's actual personality, not as an ironic gag.
+**Aesthetic:** Myspace era (~2004–2007). Deep teal-black background, electric teal and purple accents, early 2000s gradient energy. Personal and nostalgic — built for Courtney's actual personality, not as an ironic gag. Teal is the primary accent; purple is secondary. No pink.
 
 | Role | Token | Hex |
 |---|---|---|
-| Page background | `--bg` | `#0d0010` |
-| Surface / panel bg | `--surface` | `#1a0020` |
-| Header / footer bg | `--chrome-bg` | `#1a0028` |
-| Header / footer text | `--chrome-text` | `#ff00aa` |
-| Primary text | `--text` | `#ffe6ff` |
-| Secondary / muted text | `--text-muted` | `#cc99cc` |
-| Primary accent (hot pink) | `--accent` | `#ff00aa` |
-| Secondary accent (purple) | `--accent-2` | `#cc00ff` |
-| Tertiary accent (soft pink) | `--accent-3` | `#ff66cc` |
-| Link | `--link` | `#ff66cc` |
-| Link hover | `--link-hover` | `#ff00aa` |
-| Border / divider | `--border` | `#660066` |
-| Gradient start | `--grad-start` | `#1a0028` |
-| Gradient end | `--grad-end` | `#0d0010` |
+| Page background | `--bg` | `#000d0f` |
+| Surface / panel bg | `--surface` | `#001a1f` |
+| Header / footer bg | `--chrome-bg` | `#001520` |
+| Header / footer text | `--chrome-text` | `#00e5cc` |
+| Primary text | `--text` | `#e0fffa` |
+| Secondary / muted text | `--text-muted` | `#7abfb8` |
+| Primary accent (teal) | `--accent` | `#00e5cc` |
+| Secondary accent (purple) | `--accent-2` | `#9b00ff` |
+| Tertiary accent (dim teal) | `--accent-3` | `#00b8a0` |
+| Link | `--link` | `#00ccb8` |
+| Link hover | `--link-hover` | `#00e5cc` |
+| Border / divider | `--border` | `#005566` |
+| Gradient start | `--grad-start` | `#001528` |
+| Gradient end | `--grad-end` | `#000d0f` |
 | Glitter / sparkle color | `--sparkle` | `#ffffff` |
 
 **Fonts:** 'Trebuchet MS' as primary (authentically Myspace era). Pacifico (Google Fonts) for headings — captures early 2000s decorative handwritten feel.
@@ -262,10 +261,10 @@ Each stylesheet defines the same class names (`.header-content`, `.main-content`
 **Notes:**
 - Header background: `linear-gradient(135deg, var(--grad-start), var(--grad-end))`
 - Borders on panels/cards should use `--accent` or `--accent-2` — colored borders were a Myspace staple
-- Box shadows: `0 0 10px #ff00aa55`
+- Box shadows: `0 0 10px #00e5cc55`
 - Consider a repeating tiled background pattern — subtle dark damask or star pattern at very low opacity
 - Custom cursor is appropriate and very on-brand
-- Text shadows on headings: `0 0 6px #ff00aa`
+- Text shadows on headings: `0 0 6px #00e5cc`
 
 ---
 
