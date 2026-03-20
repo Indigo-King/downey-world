@@ -101,6 +101,7 @@ main {
 /* Side by side / panels */
 .side-by-side {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     align-items: flex-start;
     background-color: var(--surface);
