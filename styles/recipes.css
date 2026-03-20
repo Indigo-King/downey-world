@@ -94,6 +94,7 @@ main {
 /* Recipe card — side-by-side layout */
 .side-by-side {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     align-items: flex-start;
     background-color: var(--card-bg);
